@@ -1,0 +1,24 @@
+{
+  "name": "json-load",
+  "version": "1.0.0",
+  "description": "read in a json file, handles line-delimited",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weisjohn/json-load.git"
+  },
+  "keywords": [
+    "json",
+    "line",
+    "delimited"
+  ],
+  "author": "John Weis <weis.john@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weisjohn/json-load/issues"
+  },
+  "homepage": "https://github.com/weisjohn/json-load#readme"
+}
