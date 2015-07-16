@@ -21,7 +21,7 @@ var foo = jsonload.sync('./foo');
 
 ### errors
 
-Because `json-load` handles simple and line-delimited JSON files, there are a three possible errors that may be returned/thrown:
+Because `jsonload` handles simple and line-delimited JSON files, there are a three possible errors that may be returned/thrown:
 
  - file not found
  - an invalid JSON file
