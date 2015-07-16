@@ -1,7 +1,7 @@
 {
-  "name": "json-load",
+  "name": "jsonload",
   "version": "1.0.0",
-  "description": "read in a json file, handles line-delimited",
+  "description": "read in a .json file, handles line-delimited files",
   "main": "index.js",
   "scripts": {
     "test": "node test"
@@ -13,7 +13,9 @@
   "keywords": [
     "json",
     "line",
-    "delimited"
+    "delimited",
+    "line-delimited",
+    "multiline"
   ],
   "author": "John Weis <weis.john@gmail.com>",
   "license": "MIT",
