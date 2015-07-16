@@ -1,4 +1,4 @@
-# json-load
+# jsonload
 
 read in a json file, handles line-delimited
 
