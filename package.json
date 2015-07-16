@@ -1,6 +1,6 @@
 {
   "name": "jsonload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "read in a .json file, handles line-delimited files",
   "main": "index.js",
   "scripts": {
