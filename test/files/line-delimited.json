@@ -1,0 +1,4 @@
+{ "bool" : true, "array": [ 1 , 2 , 3 ] }
+{ "bool" : false, "array": [ 2, 3, 1 ] }
+{ "bool" : true, "array": [ 3 , 1 , 2 ] }
+{ "bool" : false, "array": [ 1 , 2 , 3 ] }
