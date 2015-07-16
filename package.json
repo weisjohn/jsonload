@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/weisjohn/json-load.git"
+    "url": "git+https://github.com/weisjohn/jsonload.git"
   },
   "keywords": [
     "json",
@@ -20,7 +20,7 @@
   "author": "John Weis <weis.john@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/weisjohn/json-load/issues"
+    "url": "https://github.com/weisjohn/jsonload/issues"
   },
-  "homepage": "https://github.com/weisjohn/json-load#readme"
+  "homepage": "https://github.com/weisjohn/jsonload#readme"
 }
