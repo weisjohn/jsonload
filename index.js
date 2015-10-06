@@ -10,7 +10,7 @@ function normalize(filepath) {
         filepath = path.resolve(path.dirname(module.parent.filename), filepath);
 
     // tack .json on the end if need be
-    if (!/.json$/.test(filepath))
+    if (!/\.json$/.test(filepath))
         filepath = filepath + '.json';
 
     return filepath;
