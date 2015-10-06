@@ -35,7 +35,7 @@ jsonload('./foo', function(err, results) {
         console.log('file not found');
     if (err.name == 'SyntaxError')
         console.log('invalid JSON file');
-    if (e.length)
+    if (err.length)
         console.log('invalid JSON lines', e);
 
     // on complex files, there may be lines which parsed correctly
@@ -45,12 +45,12 @@ jsonload('./foo', function(err, results) {
 // sync
 try {
     var foo = jsonload.sync('./foo');
-} catch (e) {
+} catch (err) {
     if (err.code == 'ENOENT')
         console.log('file not found');
     if (err.name == 'SyntaxError')
         console.log('invalid JSON file');
-    if (e.length)
+    if (err.length)
         console.log('invalid JSON lines', e);
 }
 ```
