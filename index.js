@@ -17,15 +17,18 @@ function normalize(filepath) {
 }
 
 // process line-delimited files
-function parse(contents, retained) {
+function parse(contents, retained, parser) {
     var errors = [], data = [], lines = 0;
+
+    // optional parser 
+    if (!parser) parser = JSON;
 
     // process each line of the file
     contents.toString().split('\n').forEach(function(line) {
         if (!line) return;
         lines++;
         try {
-            data.push(JSON.parse(line));
+            data.push(parser.parse(line));
         } catch (e) {
             e.line = line;
             errors.push(e);
@@ -43,8 +46,14 @@ function parse(contents, retained) {
     return ret;
 }
 
-function load(path, cb) {
+function load(path, parser, cb) {
     path = normalize(path);
+
+    // optional parser arg
+    if (typeof parser === 'function') {
+        cb = parser;
+        parser = null;
+    }
 
     // simple style
     var err;
@@ -53,13 +62,13 @@ function load(path, cb) {
     // line-delimited
     fs.readFile(path, function(e, contents) {
         if (e) return cb(e);
-        var res = parse(contents, err);
+        var res = parse(contents, err, parser);
         cb(res.errors, res.data);
     });
 }
 
 
-function sync(path) {
+function sync(path, parser) {
     path = normalize(path);
 
     // simple
@@ -68,7 +77,7 @@ function sync(path) {
 
     // line-delimited
     var contents = fs.readFileSync(path);
-    var res = parse(contents, err);
+    var res = parse(contents, err, parser);
     if (res.errors) throw res.errors;
     return res.data;
 }
