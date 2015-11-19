@@ -6,7 +6,7 @@ var fs = require('fs');
 function normalize(filepath) {
 
     // resolve to an absolute ppath
-    if (!path.isAbsolute(filepath))
+    if (!path.isAbsolute || !path.isAbsolute(filepath))
         filepath = path.resolve(path.dirname(module.parent.filename), filepath);
 
     // tack .json on the end if need be
@@ -20,7 +20,7 @@ function normalize(filepath) {
 function parse(contents, retained, parser) {
     var errors = [], data = [], lines = 0;
 
-    // optional parser 
+    // optional parser
     if (!parser) parser = JSON;
 
     // process each line of the file
